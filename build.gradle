@@ -18,8 +18,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
-    }
+        maven { url  "https://dl.bintray.com/tapligh/Tapligh-SDK" }
+
+        }
 }
 
 task clean(type: Delete) {
