@@ -3,11 +3,15 @@
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryLight">#80e27e</color>
     <color name="colorPrimaryDark">#087f23</color>
+
     <color name="colorAccent">#795548</color>
-    <color name="colorAccentLight">#a98274</color>
+    <color name="colorAccentLight">#F8E2D9</color>
     <color name="colorAccentDark">#4b2c20</color>
+
     <color name="text_color_primary">#212121</color>
     <color name="text_color_secondary">#575757</color>
     <color name="text_color_light">#fff</color>
+
+    <color name="container">#ffffff</color>
 
 </resources>

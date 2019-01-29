@@ -2,7 +2,6 @@ package com.tapligh.android.sample_native;
 
 import android.app.Application;
 
-import com.facebook.stetho.Stetho;
 import com.tapligh.sdk.nativead.Tapligh;
 
 /**

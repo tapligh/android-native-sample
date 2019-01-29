@@ -20,6 +20,7 @@ import com.tapligh.android.sample_native.databinding.FragmentChooserBinding;
 public class ChooserPageFragment extends Fragment {
 
     private static final int TYPE_SIMPLE = 1;
+    private static final int TYPE_ENDLESS_LIST = 2;
 
 
     private FragmentChooserBinding binding;
@@ -36,6 +37,7 @@ public class ChooserPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.simpleNative.setOnClickListener(new AdButtonClickListener(TYPE_SIMPLE));
+        binding.listNative.setOnClickListener(new AdButtonClickListener(TYPE_ENDLESS_LIST));
     }
 
     public void setNavigator(AppNavigator navigator) {
@@ -56,6 +58,10 @@ public class ChooserPageFragment extends Fragment {
             switch (type) {
                 case TYPE_SIMPLE:
                     navigator.gotoSimpleAdFragment(getContext());
+                    break;
+
+                case TYPE_ENDLESS_LIST:
+                    navigator.gotoEndlessListFragment(getContext());
                     break;
 
             }
