@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import com.tapligh.android.sample_native.chooser.ChooserPageFragment;
+import com.tapligh.android.sample_native.grid.SimpleEndlessGridFragment;
 import com.tapligh.android.sample_native.list.EndlessListFragment;
 import com.tapligh.android.sample_native.simple.SimpleNativeAdFragment;
 
@@ -42,10 +43,15 @@ public class AppNavigator {
         changeFragment(fragment, SimpleNativeAdFragment.class.getName());
     }
 
-    public void gotoEndlessListFragment(Context context){
+    public void gotoEndlessListFragment(Context context) {
         EndlessListFragment fragment = (EndlessListFragment) EndlessListFragment
                 .instantiate(context, EndlessListFragment.class.getName());
         changeFragment(fragment, EndlessListFragment.class.getName());
     }
 
+    public void gotoSimpleEndlessGridFragment(Context context) {
+        SimpleEndlessGridFragment fragment = (SimpleEndlessGridFragment) SimpleEndlessGridFragment
+                .instantiate(context, SimpleEndlessGridFragment.class.getName());
+        changeFragment(fragment, SimpleEndlessGridFragment.class.getName());
+    }
 }

@@ -33,6 +33,16 @@
                 android:textColor="@color/text_color_light"
                 android:textSize="@dimen/text_size_normal" />
 
+            <Button
+                android:id="@+id/simple_grid_native"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/shabnam_family"
+                android:text=" تبلیغ همسان در گرید بینهایت ۱"
+                android:textColor="@color/text_color_light"
+                android:textSize="@dimen/text_size_normal" />
 
 
         </LinearLayout>

@@ -1,4 +1,4 @@
-package com.tapligh.android.sample_native.list;
+package com.tapligh.android.sample_native.grid;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -16,11 +16,11 @@ import java.util.List;
  * CREATED BY Javadroid FOR `android-native-sample` PROJECT
  * AT: 2019/Jan/29 11:04
  */
-public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.SimpleViewHolder> {
+public class SimpleGridAdapter extends RecyclerView.Adapter<SimpleGridAdapter.SimpleViewHolder> {
 
     private List<String> items;
 
-    public SimpleListAdapter() {
+    public SimpleGridAdapter() {
         items = new ArrayList<>();
     }
 
@@ -29,7 +29,7 @@ public class SimpleListAdapter extends RecyclerView.Adapter<SimpleListAdapter.Si
     public SimpleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View rootView = LayoutInflater
                 .from(parent.getContext())
-                .inflate(R.layout.item_list_normal, parent, false);
+                .inflate(R.layout.item_grid_normal, parent, false);
         return new SimpleViewHolder(rootView);
     }
 
