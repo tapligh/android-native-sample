@@ -91,7 +91,7 @@ public class SimpleEndlessGridFragment extends Fragment {
         adBinding.setBindingOption(option);
 
         taplighAdapter = new TaplighRecyclerAdapter(getActivity(), originalAdapter, strategy);
-        TaplighNativeRenderer renderer = new TaplighNativeRenderer(R.layout.native_view_template2, R.id.native_ad_root, adBinding);
+        TaplighNativeRenderer renderer = new TaplighNativeRenderer(R.layout.native_view_template3, R.id.native_ad_root, adBinding);
         renderer.setBadgePosition(BadgePosition.top_left);
         taplighAdapter.setAdRenderer(renderer);
 
