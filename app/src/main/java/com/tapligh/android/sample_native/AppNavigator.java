@@ -1,11 +1,12 @@
 package com.tapligh.android.sample_native;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import com.tapligh.android.sample_native.chooser.ChooserPageFragment;
-import com.tapligh.android.sample_native.grid.SimpleEndlessGridFragment;
+import com.tapligh.android.sample_native.grid.EndlessGridFragment;
 import com.tapligh.android.sample_native.list.EndlessListFragment;
 import com.tapligh.android.sample_native.simple.SimpleNativeAdFragment;
 
@@ -50,8 +51,21 @@ public class AppNavigator {
     }
 
     public void gotoSimpleEndlessGridFragment(Context context) {
-        SimpleEndlessGridFragment fragment = (SimpleEndlessGridFragment) SimpleEndlessGridFragment
-                .instantiate(context, SimpleEndlessGridFragment.class.getName());
-        changeFragment(fragment, SimpleEndlessGridFragment.class.getName());
+        Bundle bundle = new Bundle();
+        bundle.putInt("step" , 1);
+
+        EndlessGridFragment fragment = (EndlessGridFragment) EndlessGridFragment
+                .instantiate(context, EndlessGridFragment.class.getName(), bundle);
+        changeFragment(fragment, EndlessGridFragment.class.getName());
+    }
+
+
+    public void gotoBannerEndlessGridFragment(Context context){
+        Bundle bundle = new Bundle();
+        bundle.putInt("step" , 2);
+
+        EndlessGridFragment fragment = (EndlessGridFragment) EndlessGridFragment
+                .instantiate(context, EndlessGridFragment.class.getName(), bundle);
+        changeFragment(fragment, EndlessGridFragment.class.getName());
     }
 }

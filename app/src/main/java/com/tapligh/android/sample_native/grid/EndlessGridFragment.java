@@ -29,16 +29,27 @@ import java.util.ArrayList;
  * CREATED BY Javadroid FOR `android-native-sample` PROJECT
  * AT: 2019/Jan/30 09:54
  */
-public class SimpleEndlessGridFragment extends Fragment {
+public class EndlessGridFragment extends Fragment {
 
     private static final String UNIT_CODE = "e388c999-af88-4ea9-aa9c-ae8527a8403b";
     private final int DATA_SIZE = 60;
     private final int AD_INTERVAL = 7;
     private int startPosition = 0;
 
+    private int type;
+
     private FragmentGridBinding binding;
     private SimpleGridAdapter originalAdapter;
     private TaplighRecyclerAdapter taplighAdapter;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Bundle bundle = getArguments();
+        if(bundle != null){
+            type = bundle.getInt("step");
+        }
+    }
 
     @Nullable
     @Override
@@ -51,6 +62,9 @@ public class SimpleEndlessGridFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         originalAdapter = new SimpleGridAdapter();
+
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
+        binding.gridView.setLayoutManager(layoutManager);
 
         createAdAssets();
         binding.gridView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -71,8 +85,6 @@ public class SimpleEndlessGridFragment extends Fragment {
                 }
             }
         });
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
-        binding.gridView.setLayoutManager(layoutManager);
         fillList();
     }
 
@@ -80,18 +92,37 @@ public class SimpleEndlessGridFragment extends Fragment {
         AdPlacementStrategy strategy = new AdPlacementStrategy();
         strategy.enableRepeatingMode(AD_INTERVAL);
 
-        AdViewBinding adBinding = new AdViewBinding
-                .Builder()
-                .setIconRes(R.id.native_ad_icon)
-                .setTitleRes(R.id.native_ad_title)
-                .setBannerRes(R.id.native_ad_banner)
-                .build();
         AdViewBindingOption option = new AdViewBindingOption();
-        option.setBannerAR(AspectRatio.AR1x1);
-        adBinding.setBindingOption(option);
 
         taplighAdapter = new TaplighRecyclerAdapter(getActivity(), originalAdapter, strategy);
-        TaplighNativeRenderer renderer = new TaplighNativeRenderer(R.layout.native_view_template3, R.id.native_ad_root, adBinding);
+        TaplighNativeRenderer renderer ;
+
+        if(type == 1){  // simple
+            AdViewBinding adBinding = new AdViewBinding
+                    .Builder()
+                    .setIconRes(R.id.native_ad_icon)
+                    .setTitleRes(R.id.native_ad_title)
+                    .setBannerRes(R.id.native_ad_banner)
+                    .build();
+            option.setBannerAR(AspectRatio.AR1x1);
+            adBinding.setBindingOption(option);
+
+            renderer = new TaplighNativeRenderer(R.layout.native_view_template3, R.id.native_ad_root, adBinding);
+
+        } else { // banner
+            AdViewBinding adBinding = new AdViewBinding
+                    .Builder()
+                    .setTitleRes(R.id.native_ad_title)
+                    .setBannerRes(R.id.native_ad_banner)
+                    .setDescriptionRes(R.id.native_ad_desc)
+                    .build();
+            option.setBannerAR(AspectRatio.AR16x9);
+            adBinding.setBindingOption(option);
+
+            renderer = new TaplighNativeRenderer(R.layout.native_view_template4, R.id.native_ad_root, adBinding);
+            taplighAdapter.showAdAsBanner(true);
+        }
+
         renderer.setBadgePosition(BadgePosition.top_left);
         taplighAdapter.setAdRenderer(renderer);
 
@@ -107,7 +138,7 @@ public class SimpleEndlessGridFragment extends Fragment {
     private void updateDataList() {
         ArrayList<String> tmp = new ArrayList<>();
         for (int i = startPosition; i < DATA_SIZE + startPosition; i++) {
-            tmp.add("آیتم در جایگاه شماره " + (i + 1));
+            tmp.add("آیتم جایگاه شماره " + (i + 1));
         }
         originalAdapter.addItems(tmp);
         startPosition += DATA_SIZE;

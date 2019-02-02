@@ -22,6 +22,7 @@ public class ChooserPageFragment extends Fragment {
     private static final int TYPE_SIMPLE = 1;
     private static final int TYPE_ENDLESS_LIST = 2;
     private static final int TYPE_ENDLESS_GRID = 3;
+    private static final int TYPE_BANNER_ENDLESS_GRID = 4;
 
 
     private FragmentChooserBinding binding;
@@ -40,6 +41,7 @@ public class ChooserPageFragment extends Fragment {
         binding.simpleNative.setOnClickListener(new AdButtonClickListener(TYPE_SIMPLE));
         binding.listNative.setOnClickListener(new AdButtonClickListener(TYPE_ENDLESS_LIST));
         binding.simpleGridNative.setOnClickListener(new AdButtonClickListener(TYPE_ENDLESS_GRID));
+        binding.bannerGridNative.setOnClickListener(new AdButtonClickListener(TYPE_BANNER_ENDLESS_GRID));
     }
 
     public void setNavigator(AppNavigator navigator) {
@@ -68,6 +70,10 @@ public class ChooserPageFragment extends Fragment {
 
                 case TYPE_ENDLESS_GRID:
                     navigator.gotoSimpleEndlessGridFragment(getContext());
+                    break;
+
+                case TYPE_BANNER_ENDLESS_GRID:
+                    navigator.gotoBannerEndlessGridFragment(getContext());
                     break;
             }
         }
