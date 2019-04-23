@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tapligh.ir</domain>
+        <domain includeSubdomains="true">tapligh.com</domain>
+        <domain includeSubdomains="true">tapliq.com</domain>
+        <domain includeSubdomains="true">185.120.220.62</domain>
+    </domain-config>
+</network-security-config>
