@@ -20,4 +20,8 @@
     <dimen name="shadow_height">54dp</dimen>
     <dimen name="margin10">10dp</dimen>
     <dimen name="margin36">36dp</dimen>
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="line_height">1dp</dimen>
+    <dimen name="margin32">32dp</dimen>
+    <dimen name="margin48">48dp</dimen>
 </resources>

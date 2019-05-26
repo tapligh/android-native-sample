@@ -13,5 +13,6 @@
     <color name="text_color_light">#fff</color>
 
     <color name="container">#ffffff</color>
+    <color name="line_color">#dddddd</color>
 
 </resources>

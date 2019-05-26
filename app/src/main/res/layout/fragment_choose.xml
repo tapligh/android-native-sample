@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/single_ad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin16">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/single_ad_icon"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:fontFamily="@font/shabnam_family"
+                    android:text="نمایش تکی تبلیغات همسان"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginStart="@dimen/margin48"
+                android:layout_marginEnd="@dimen/margin16"
+                android:background="@color/line_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/single_ad_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin16">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/list_ad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin16">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/list_ad_icon"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:fontFamily="@font/shabnam_family"
+                    android:text="نمایش تبلیغات همسان در لیست"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginStart="@dimen/margin48"
+                android:layout_marginEnd="@dimen/margin16"
+                android:background="@color/line_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_ad_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin16">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/grid_ad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin16">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/grid_ad_icon"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:fontFamily="@font/shabnam_family"
+                    android:text="نمایش تبلیغات همسان در گرید"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginStart="@dimen/margin48"
+                android:layout_marginEnd="@dimen/margin16"
+                android:background="@color/line_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/grid_ad_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin16">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</layout>
