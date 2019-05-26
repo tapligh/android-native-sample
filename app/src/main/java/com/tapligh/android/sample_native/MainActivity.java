@@ -1,10 +1,12 @@
 package com.tapligh.android.sample_native;
 
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.tapligh.android.sample_native.databinding.ActivityMainBinding;
+import com.tapligh.android.sample_native.util.LocaleHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         navigator.gotoChooserFragment(this);
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase, "fa"));
+    }
 
     @Override
     public void onBackPressed() {
