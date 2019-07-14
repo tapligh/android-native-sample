@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_margin="@dimen/margin8"
+    android:layoutDirection="ltr"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/list_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/list_icon"
+            android:layout_width="@dimen/image_size_normal"
+            android:layout_height="@dimen/image_size_normal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin8"
+            android:contentDescription="Ad Icon"
+            tools:src="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/list_title"
+            style="@style/title_native_ad"
+            android:layout_alignTop="@+id/list_icon"
+            android:layout_alignBottom="@+id/list_icon"
+            android:layout_toLeftOf="@+id/list_icon"
+            tools:text="عنوان نمایشی تبلیغ"/>
+
+        <ImageView
+            android:id="@+id/list_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_icon"
+            android:adjustViewBounds="true"
+            android:contentDescription="Banner"
+            android:scaleType="centerCrop"
+            tools:layout_height="@dimen/banner_height"
+            tools:src="@color/colorAccentLight"/>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

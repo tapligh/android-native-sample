@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin8"
+    android:layout_marginEnd="@dimen/margin16"
+    android:layoutDirection="ltr"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:id="@+id/list_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/list_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:minHeight="@dimen/min_feature_height"
+            android:scaleType="centerCrop"
+            android:src="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"
+            android:layout_alignBottom="@+id/list_banner"
+            android:background="@drawable/bg_item_header"/>
+
+
+        <TextView
+            android:id="@+id/list_title"
+            style="@style/title_native_ad"
+            android:text="تیتر"
+            android:layout_above="@+id/list_desc"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin8"
+            android:textColor="@color/text_color_light"/>
+
+        <TextView
+            android:id="@+id/list_desc"
+            style="@style/description_native_ad"
+            android:text="توضیحات بیشنر"
+            android:layout_alignBottom="@+id/list_banner"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin8"
+            android:textColor="@color/text_color_light"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

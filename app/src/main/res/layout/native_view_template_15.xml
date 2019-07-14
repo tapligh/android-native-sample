@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin8"
+    android:layoutDirection="ltr"
+    android:visibility="gone"
+    android:id="@+id/root_custom_3"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/user_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close"/>
+
+        <TextView
+            android:id="@+id/user_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/margin8"
+            android:fontFamily="@font/shabnam_family"
+            android:gravity="center"
+            android:text="نمایش این تبلیغ به رایگان ماندن این برنامه کمک میکند."
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_close"/>
+
+        <com.tapligh.sdk.nativead.TaplighNativeAdView
+            android:id="@+id/native_ad_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_desc">
+
+
+            <ImageView
+                android:id="@+id/native_ad_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_desc"
+                android:adjustViewBounds="true"
+                android:contentDescription="Banner"
+                android:scaleType="centerCrop"
+                tools:layout_height="@dimen/banner_height"
+                tools:src="@color/colorAccentLight"/>
+
+            <TextView
+                android:id="@+id/native_ad_title"
+                style="@style/title_native_ad"
+                android:layout_below="@+id/native_ad_banner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin8"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/native_ad_desc"
+                style="@style/description_native_ad"
+                android:layout_below="@+id/native_ad_title"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/margin16"/>
+
+
+            <Button
+                android:id="@+id/native_ad_action_button"
+                style="@style/small_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/native_ad_desc"
+                android:layout_margin="@dimen/margin8"
+                android:background="@drawable/bg_round_blue"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+        </com.tapligh.sdk.nativead.TaplighNativeAdView>
+
+
+        <View
+            android:id="@+id/user_sepator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin32"
+            android:layout_marginBottom="@dimen/margin16"
+            android:background="@color/colorDefaultBackground"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/native_ad_root"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin32"
+            android:layout_marginBottom="@dimen/margin16"
+            android:fontFamily="@font/shabnam_bold"
+            android:text="حذف تبلیغ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_sepator"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

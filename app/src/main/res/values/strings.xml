@@ -1,3 +1,55 @@
 <resources>
+
     <string name="app_name">Tapligh Native Demo</string>
+
+    <string name="category_single_tapligh">تکی</string>
+    <string name="category_list_tapligh">لیست </string>
+    <string name="category_list_grid_tapligh">لیست گرید</string>
+    <string name="category_custome_tapligh">شخصی سازی</string>
+
+    <array name="categoryType">
+
+        <item>@string/category_single_tapligh</item>
+        <item>@string/category_list_tapligh</item>
+        <item>@string/category_list_grid_tapligh</item>
+        <item>@string/category_custome_tapligh</item>
+
+    </array>
+
+    <array name="singleType">
+
+        <item name="child_single_1">@layout/fragment_single_1</item>
+        <item name="child_single_2">@layout/fragment_single_2</item>
+        <item name="child_single_3">@layout/fragment_single_3</item>
+        <item name="child_single_4">@layout/fragment_single_4</item>
+        <item name="child_single_6">@layout/fragment_single_6</item>
+        <item name="child_single_7">@layout/fragment_single_7</item>
+        <item name="child_single_9">@layout/fragment_single_9</item>
+        <item name="child_single_11">@layout/fragment_single_11</item>
+        <item name="child_single_12">@layout/fragment_single_12</item>
+        <item name="child_single_13">@layout/fragment_single_13</item>
+
+    </array>
+
+    <array name="listType">
+        <item name="child_list_1">@layout/fragment_list_1</item>
+        <item name="child_list_3">@layout/fragment_list_3</item>
+        <item name="child_list_6">@layout/fragment_list_6</item>
+        <item name="child_list_9">@layout/fragment_list_9</item>
+        <item name="child_list_11">@layout/fragment_list_13</item>
+    </array>
+
+    <array name="gridType">
+        <item name="child_list_1">@layout/fragment_grid_1</item>
+        <item name="child_list_1">@layout/fragment_grid_2</item>
+        <item name="child_list_1">@layout/fragment_grid_3</item>
+    </array>
+
+    <array name="customType">
+        <item name="child_custom_1">@layout/fragment_custom_1</item>
+        <item name="child_custom_2">@layout/fragment_custom_2</item>
+        <item name="child_custom_2">@layout/fragment_custom_3</item>
+    </array>
+
+
 </resources>

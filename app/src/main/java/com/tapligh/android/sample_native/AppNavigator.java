@@ -4,7 +4,9 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
-import com.tapligh.android.sample_native.view.ChooserPageFragment;
+import com.tapligh.android.sample_native.view.Chooser.ChooserPageFragment;
+import com.tapligh.android.sample_native.view.TAPLIGH_TYPE;
+import com.tapligh.android.sample_native.view.displayTapligh.DisplayTaplighFragment;
 
 /**
  * CREATED BY Javadroid FOR `android-native-sample` PROJECT
@@ -12,26 +14,35 @@ import com.tapligh.android.sample_native.view.ChooserPageFragment;
  */
 public class AppNavigator {
 
-    private FragmentManager manager;
-    private int rootView;
+  private FragmentManager manager;
+  private int rootView;
 
-    public AppNavigator(FragmentManager manager, int rootView) {
-        this.manager = manager;
-        this.rootView = rootView;
-    }
+  public AppNavigator(FragmentManager manager, int rootView) {
+    this.manager = manager;
+    this.rootView = rootView;
+  }
 
-    private void changeFragment(Fragment fragment, String backStackTag) {
-        manager.beginTransaction()
-                .add(rootView, fragment)
-                .addToBackStack(backStackTag)
-                .commitAllowingStateLoss();
-    }
+  private void changeFragment(Fragment fragment, String backStackTag) {
+    manager.beginTransaction()
+      .add(rootView, fragment)
+      .addToBackStack(backStackTag)
+      .commitAllowingStateLoss();
+  }
 
-    public void gotoChooserFragment(Context context) {
-        ChooserPageFragment fragment = (ChooserPageFragment) ChooserPageFragment
-                .instantiate(context, ChooserPageFragment.class.getName());
-        fragment.setNavigator(this);
-        changeFragment(fragment, ChooserPageFragment.class.getName());
-    }
+  public void gotoChooserFragment(Context context) {
 
+    ChooserPageFragment fragment = (ChooserPageFragment) ChooserPageFragment
+      .instantiate(context, ChooserPageFragment.class.getName());
+
+    fragment.setNavigator(this);
+    changeFragment(fragment, ChooserPageFragment.class.getName());
+  }
+
+  public void gotoDisplayTaplighFragment(Context context, int childCategory, TAPLIGH_TYPE taplighType) {
+
+    DisplayTaplighFragment fragment = DisplayTaplighFragment.instance(childCategory, taplighType);
+
+    fragment.setNavigator(this);
+    changeFragment(fragment, DisplayTaplighFragment.class.getName());
+  }
 }

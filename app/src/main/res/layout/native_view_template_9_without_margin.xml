@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tapligh.sdk.nativead.TaplighNativeAdView
+    android:id="@+id/native_ad_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:layoutDirection="ltr"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <ImageView
+            android:id="@+id/native_ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="Banner"
+            android:scaleType="centerCrop"
+            tools:layout_height="@dimen/banner_height"
+            tools:src="@color/colorAccentLight"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"
+            android:layout_alignBottom="@+id/native_ad_banner"
+            android:background="@drawable/bg_item_header"/>
+
+
+        <TextView
+            android:id="@+id/native_ad_title"
+            style="@style/title_native_ad"
+            android:layout_above="@+id/native_ad_desc"
+            android:layout_alignEnd="@+id/native_ad_desc"
+            android:layout_alignRight="@+id/native_ad_desc"
+            android:layout_toRightOf="@+id/native_ad_action_button"
+            android:textColor="@color/text_color_light"/>
+
+        <TextView
+            android:id="@+id/native_ad_desc"
+            style="@style/description_native_ad"
+            android:layout_alignEnd="@+id/native_ad_banner"
+            android:layout_alignRight="@+id/native_ad_banner"
+            android:layout_alignBottom="@+id/native_ad_banner"
+            android:layout_marginEnd="@dimen/margin8"
+            android:layout_marginRight="@dimen/margin8"
+            android:layout_marginBottom="@dimen/margin8"
+            android:layout_toRightOf="@+id/native_ad_action_button"
+            android:textColor="@color/text_color_light"/>
+
+
+        <Button
+            android:layout_marginBottom="@dimen/margin16"
+            android:id="@+id/native_ad_action_button"
+            style="@style/small_action_button"
+            android:layout_alignBottom="@+id/native_ad_banner"
+            android:layout_marginStart="@dimen/margin8"
+            android:layout_marginLeft="@dimen/margin8"
+            android:text="اکشن تبلیغ"/>
+
+
+    </com.tapligh.sdk.nativead.TaplighNativeAdView>

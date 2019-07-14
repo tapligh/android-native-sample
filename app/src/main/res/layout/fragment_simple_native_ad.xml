@@ -6,10 +6,13 @@
         android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff">
+        android:background="#fff"
+        android:clickable="true"
+        android:focusable="true">
 
-        <include
-            layout="@layout/native_view_template1" />
+
+    <include
+            layout="@layout/native_view_template_3" />
 
 
         <TextView

@@ -9,15 +9,16 @@
     <dimen name="margin16">16dp</dimen>
     <dimen name="margin8">8dp</dimen>
 
-    <dimen name="text_size_large">16sp</dimen>
-    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_large">15sp</dimen>
+    <dimen name="text_size_normal">13sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
 
     <dimen name="image_size_normal">64dp</dimen>
     <dimen name="image_size_small">48dp</dimen>
     <dimen name="image_size_xsmall">36dp</dimen>
 
     <dimen name="min_feature_height">200dp</dimen>
-    <dimen name="shadow_height">54dp</dimen>
+    <dimen name="shadow_height">84dp</dimen>
     <dimen name="margin10">10dp</dimen>
     <dimen name="margin36">36dp</dimen>
     <dimen name="icon_size_small">24dp</dimen>
@@ -25,7 +26,16 @@
     <dimen name="margin32">32dp</dimen>
     <dimen name="margin48">48dp</dimen>
 
-    <dimen name="button_small_width">54dp</dimen>
-    <dimen name="button_small_height">96dp</dimen>
+    <dimen name="button_small_width">64dp</dimen>
+    <dimen name="button_small_height">34dp</dimen>
+
+    <dimen name="button_normal_width">120dp</dimen>
+    <dimen name="button_normal_height">48dp</dimen>
+
+    <dimen name="margin4">4dp</dimen>
+    <dimen name="padding8">8dp</dimen>
+    <dimen name="padding4">4dp</dimen>
+    <dimen name="padding2">2dp</dimen>
+    <dimen name="margin2">2dp</dimen>
 
 </resources>

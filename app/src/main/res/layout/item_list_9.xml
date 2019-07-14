@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin8"
+    android:layoutDirection="ltr"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/list_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/list_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="Banner"
+            android:scaleType="centerCrop"
+            tools:layout_height="@dimen/banner_height"
+            tools:src="@color/colorAccentLight"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"
+            android:layout_alignBottom="@+id/list_banner"
+            android:background="@drawable/bg_item_header"/>
+
+
+        <TextView
+            android:id="@+id/list_title"
+            style="@style/title_native_ad"
+            android:layout_above="@+id/list_desc"
+            android:layout_alignEnd="@+id/list_desc"
+            android:layout_alignRight="@+id/list_desc"
+            android:layout_toRightOf="@+id/list_action_button"
+            android:textColor="@color/text_color_light"/>
+
+        <TextView
+            android:id="@+id/list_desc"
+            style="@style/description_native_ad"
+            android:layout_alignEnd="@+id/list_banner"
+            android:layout_alignRight="@+id/list_banner"
+            android:layout_alignBottom="@+id/list_banner"
+            android:layout_marginEnd="@dimen/margin8"
+            android:layout_marginRight="@dimen/margin8"
+            android:layout_marginBottom="@dimen/margin8"
+            android:layout_toRightOf="@+id/list_action_button"
+            android:gravity="right"
+            android:textColor="@color/text_color_light"/>
+
+
+        <Button
+            android:id="@+id/list_action_button"
+            style="@style/small_action_button"
+            android:layout_alignBottom="@+id/list_banner"
+            android:layout_marginBottom="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin8"
+            android:layout_marginLeft="@dimen/margin8"
+            android:text="اکشن"/>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
